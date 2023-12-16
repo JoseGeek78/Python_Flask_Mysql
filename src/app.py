@@ -12,7 +12,7 @@ app = Flask(__name__, template_folder = template_dir)
 @app.route('/')
 def home():
     cursor = db.database.cursor()
-    cursor.execute()
+    cursor.execute('SELECT * FROM users')
     return render_template('index.html')
 
 
