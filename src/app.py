@@ -2,6 +2,7 @@ from flask import Flask, render_template
 import os
 
 
+
 template_dir = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 template_dir = os.path.join(template_dir, 'src', 'templates')
 
@@ -13,6 +14,7 @@ app = Flask(__name__, template_folder = template_dir)
 def home():
     cursor = db.database.cursor()
     cursor.execute('SELECT * FROM users')
+    myresult = cursor.fetchall()
     return render_template('index.html')
 
 
