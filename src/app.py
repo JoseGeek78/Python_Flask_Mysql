@@ -11,6 +11,8 @@ app = Flask(__name__, template_folder = template_dir)
 # Rutas de la aplicación
 @app.route('/')
 def home():
+    cursor = db.database.cursor()
+    cursor.execute()
     return render_template('index.html')
 
 
