@@ -14,6 +14,9 @@ def home():
     cursor = db.database.cursor()
     cursor.execute('SELECT * FROM users')
     myresult = cursor.fetchall()
+    # Convertir los datos a diccionario
+    insertObject = []
+    columnNames = 
     return render_template('index.html')
 
 
