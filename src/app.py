@@ -19,6 +19,7 @@ def home():
     columnNames = [column[0] for column in cursor.description]
     for record in myresult:
         insertObject.appen(dict(zip(columnNames, record)))
+    cursor.colse()
     return render_template('index.html')
 
 
