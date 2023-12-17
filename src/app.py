@@ -16,7 +16,9 @@ def home():
     myresult = cursor.fetchall()
     # Convertir los datos a diccionario
     insertObject = []
-    columnNames = 
+    columnNames = [column[0] for column in cursor.description]
+    for record in myresult:
+        insertObject.appen(dict(zip(columnNames, record)))
     return render_template('index.html')
 
 
