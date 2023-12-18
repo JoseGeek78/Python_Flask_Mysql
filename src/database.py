@@ -1,8 +1,8 @@
 import mysql.connector
 
 database = mysql.connector.connect(
-    host='localhost',
-    user='JoseGeek78',
+    host='your_host',
+    user='your_user',
     password='your_password',
-    database='bd_app_crud'
+    database='your_dbb'
 )
